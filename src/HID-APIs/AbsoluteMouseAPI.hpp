@@ -88,6 +88,15 @@ void AbsoluteMouseAPI::move(int x, int y, signed char wheel){
 	moveTo(qadd16(xAxis, x), qadd16(yAxis, y), wheel);
 }
 
+void AbsoluteMouseAPI::buttonsAndMove(uint8_t b,signed char x, signed char y, signed char wheel = 0)
+{
+	if (b != _buttons)
+	{
+		_buttons = b;
+	}
+	move(x,y,wheel);
+}
+
 void AbsoluteMouseAPI::press(uint8_t b){
 	// press LEFT by default
 	buttons(_buttons | b);

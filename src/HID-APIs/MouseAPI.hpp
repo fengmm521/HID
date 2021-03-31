@@ -66,6 +66,14 @@ void MouseAPI::buttons(uint8_t b)
 		move(0,0,0);
 	}
 }
+void MouseAPI::buttonsAndMove(uint8_t b,signed char x, signed char y, signed char wheel = 0)
+{
+	if (b != _buttons)
+	{
+		_buttons = b;
+	}
+	move(x,y,wheel);
+}
 
 void MouseAPI::press(uint8_t b)
 {

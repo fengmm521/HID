@@ -74,6 +74,8 @@ public:
 	inline void releaseAll(void);
 	inline bool isPressed(uint8_t b = MOUSE_LEFT);
 
+	inline void buttonsAndMove(uint8_t b,signed char x, signed char y, signed char wheel = 0);
+	
 	// Sending is public in the base class for advanced users.
 	virtual void SendReport(void* data, int length) = 0;
 };

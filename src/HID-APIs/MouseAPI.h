@@ -78,7 +78,7 @@ public:
 
   // Sending is public in the base class for advanced users.
   virtual void SendReport(void* data, int length) = 0;
-
+  inline void buttonsAndMove(uint8_t b,signed char x, signed char y, signed char wheel = 0);
 protected:
   uint8_t _buttons;
   inline void buttons(uint8_t b);
